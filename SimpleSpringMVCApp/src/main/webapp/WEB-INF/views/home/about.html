@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SimpleMVCApp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+<div class="container">
+    <div class="text-center">
+        <h1>About</h1>
+        <p class="lead">
+        Bacon ipsum dolor amet tail picanha brisket, pork chop prosciutto capicola alcatra jowl 
+        corned beef shankle pancetta ball tip rump ham hock turducken. Prosciutto cow boudin jowl,
+        salami fatback ham landjaeger spare ribs ham hock capicola tongue. Tail ribeye shank, 
+        prosciutto swine cow pork tongue filet mignon corned beef shoulder turkey bacon drumstick t-bone.
+        Strip steak pork belly jerky flank, corned beef spare ribs salami ham hock picanha bacon drumstick andouille prosciutto.
+        </p>
+    </div>
+    <div th:replace="fragments/footer :: footer">&copy; 2013 The Static Templates</div>
+</div>
+</body>
+</html>
