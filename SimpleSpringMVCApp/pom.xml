@@ -29,6 +29,21 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
         </dependency>
+        <dependency>
+		  <groupId>com.cloudant</groupId>
+		  <artifactId>cloudant-client</artifactId>
+		  <version>1.2.3</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.apache.wink</groupId>
+			<artifactId>wink-json4j</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.4</version>
+		</dependency>    	
         <!-- Security -->
         <dependency>
             <groupId>org.springframework.security</groupId>
