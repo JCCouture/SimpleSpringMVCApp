@@ -7,6 +7,11 @@
     <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
+    
+    <!-- [if IE]>
+    <script src="../resources/build/ie.js" th:src="@{/resources/build/ie.js}"></script>
+    <![endif] -->
+    
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
@@ -19,6 +24,14 @@
          boudin turducken et leberkas eiusmod. Drumstick do exercitation frankfurter.
         </p>
     </div>
+    
+    <div id="container"></div>
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="../resources/build/showdown.js" th:src="@{/resources/build/showdown.js}"></script>
+    <script src="../resources/build/react.js" th:src="@{/resources/build/react.js}"></script>
+    <script src="../resources/build/JSXTransformer.js" th:src="@{/resources/build/JSXTransformer.js}"></script>
+    <script type="text/jsx" src="../resources/js/app.js" th:src="@{/resources/js/app.js}"></script>
+    
     <div th:replace="fragments/footer :: footer">&copy; 2013 The Static Templates</div>
 </div>
 </body>
