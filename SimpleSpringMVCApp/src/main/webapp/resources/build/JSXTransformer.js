@@ -21,7 +21,6 @@ return (function(e,t,n){function i(n,s){if(!t[n]){if(!e[n]){var o=typeof require
 /* jshint browser: true */
 /* jslint evil: true */
 
-'use strict';
 var runScripts;
 
 var transform = require('./fbtransform/lib/transform').transform;
@@ -609,7 +608,7 @@ exports.getDocblock = getDocblock;
  */
 /*global exports:true*/
 /*jslint node: true*/
-"use strict";
+" ";
 
 /**
  * Syntax transfomer for javascript. Takes the source in, spits the source
@@ -780,7 +779,7 @@ parseYieldExpression: true
 */
 
 (function (root, factory) {
-    'use strict';
+    ' ';
 
     // Universal Module Definition (UMD) to support AMD, CommonJS/Node.js,
     // Rhino, and plain browser loading.
@@ -792,7 +791,7 @@ parseYieldExpression: true
         factory((root.esprima = {}));
     }
 }(this, function (exports) {
-    'use strict';
+    ' ';
 
     var Token,
         TokenName,
@@ -4826,7 +4825,7 @@ parseYieldExpression: true
                 break;
             }
             directive = source.slice(token.range[0] + 1, token.range[1] - 1);
-            if (directive === 'use strict') {
+            if (directive === ' ') {
                 strict = true;
                 if (firstRestricted) {
                     throwErrorTolerant(firstRestricted, Messages.StrictOctalLiteral);
@@ -5335,7 +5334,7 @@ parseYieldExpression: true
                 break;
             }
             directive = source.slice(token.range[0] + 1, token.range[1] - 1);
-            if (directive === 'use strict') {
+            if (directive === ' ') {
                 strict = true;
                 if (firstRestricted) {
                     throwErrorTolerant(firstRestricted, Messages.StrictOctalLiteral);
@@ -6896,7 +6895,7 @@ parseYieldExpression: true
  * limitations under the License.
  */
 /*global exports:true*/
-"use strict";
+" ";
 var catchup = require('../lib/utils').catchup;
 var append = require('../lib/utils').append;
 var move = require('../lib/utils').move;
@@ -7193,7 +7192,7 @@ exports.SourceNode = require('./source-map/source-node').SourceNode;
  * limitations under the License.
  */
 /*global exports:true*/
-"use strict";
+" ";
 
 /**
  * Desugarizer for ES6 minimal class proposal. See
@@ -7688,7 +7687,7 @@ exports.visitPrivateProperty = visitPrivateProperty;
  * limitations under the License.
  */
 /*global exports:true*/
-"use strict";
+" ";
 
 var Syntax = require('esprima').Syntax;
 
@@ -7889,7 +7888,7 @@ exports.visitReactTag = visitReactTag;
  * limitations under the License.
  */
 /*global exports:true*/
-"use strict";
+" ";
 
 var Syntax = require('esprima').Syntax;
 var catchup = require('../lib/utils').catchup;
@@ -9195,7 +9194,7 @@ process.chdir = function (dir) {
 
 /*jslint node: true */
 /*global module, process */
-'use strict';
+' ';
 
 var path = require('path');
 

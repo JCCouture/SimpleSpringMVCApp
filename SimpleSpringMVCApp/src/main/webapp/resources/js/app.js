@@ -7,7 +7,7 @@ var Comment = React.createClass({
         var rawMarkup = converter.makeHtml(this.props.children.toString());
         return (
             <div class="comment">
-                <h2 class="commentAuthor">{this.props.author}</h2>
+                <h2 class="commentAuthor">{this.props.email}</h2>
                 <span dangerouslySetInnerHTML={{__html: rawMarkup}} />
             </div>
             );
@@ -62,7 +62,7 @@ var CommentBox = React.createClass({
 var CommentList = React.createClass({
     render: function() {
         var commentNodes = this.props.data.map(function (comment) {
-            return <Comment author={comment.author}>{comment.text}</Comment>;
+            return <Comment email={comment.email}>{comment.password}</Comment>;
         });
         return <div class="commentList">{commentNodes}</div>;
     }
@@ -70,21 +70,21 @@ var CommentList = React.createClass({
 
 var CommentForm = React.createClass({
     handleSubmit: React.autoBind(function() {
-        var author = this.refs.author.getDOMNode().value.trim();
-        var text = this.refs.text.getDOMNode().value.trim();
-        if (text.length === 0 || author.length === 0) {
+        var email = this.refs.email.getDOMNode().value.trim();
+        var password = this.refs.password.getDOMNode().value.trim();
+        if (email.length === 0 || password.length === 0) {
             return false;
         }
-        this.props.onCommentSubmit({author: author, text: text});
-        this.refs.author.getDOMNode().value = '';
-        this.refs.text.getDOMNode().value = '';
+        this.props.onCommentSubmit({email: email, password: password});
+        this.refs.email.getDOMNode().value = '';
+        this.refs.password.getDOMNode().value = '';
         return false;
     }),
     render: function() {
         return (
             <form className="commentForm" onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="Your name" ref="author" />
-                <input type="text" placeholder="Say something..." ref="text" />
+                <input type="text" placeholder="Your name" ref="email" />
+                <input type="text" placeholder="Say something..." ref="password" />
                 <input type="submit" value="Post" />
             </form>
             );

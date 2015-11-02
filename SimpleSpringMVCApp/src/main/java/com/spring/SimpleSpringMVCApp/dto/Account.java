@@ -1,19 +1,20 @@
 package com.spring.SimpleSpringMVCApp.dto;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class Account 
 {
 	private String email;
 	private String password;
-	private String role = "ROLE_USER";
 
     protected Account() {
 
 	}
 	
-	public Account(String email, String password,String role) {
+	public Account(String email, String password) {
 		this.email = email;
 		this.password = password;
-		this.role = role;
 	}
 
     public String getEmail() {
@@ -31,12 +32,11 @@ public class Account
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
+	
+	@Override
+    public String toString() {
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		String json = gson.toJson(this);
+		return json;
+    }
 }

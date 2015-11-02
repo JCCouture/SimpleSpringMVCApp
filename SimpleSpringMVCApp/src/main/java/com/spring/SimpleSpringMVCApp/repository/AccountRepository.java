@@ -16,10 +16,9 @@ public class AccountRepository {
 	
 	private List<Account> bd = new LinkedList<>();
 	
-	public Account save(Account account)
+	public void save(Account account)
 	{
-		account.setPassword(account.getPassword());
-		return account;
+		bd.add(account);
 	}
 	
 	public Account findByEmail(String email)

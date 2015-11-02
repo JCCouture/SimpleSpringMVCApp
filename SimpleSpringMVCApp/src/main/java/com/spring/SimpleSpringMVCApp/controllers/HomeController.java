@@ -42,11 +42,11 @@ public class HomeController
 		return "home/about";
 	}
 	
-	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/contact", method = RequestMethod.GET)
 	public String contact() 
 	{
 		return "home/contact";
-	}
+	}*/
 	
 	@RequestMapping(value = "/comments", method = RequestMethod.GET, produces = "application/json")
     @ResponseStatus(value = HttpStatus.OK)
@@ -55,6 +55,15 @@ public class HomeController
 	{
 		return accountRepository.findAll();
 	}
+	
+	 @RequestMapping(value = "/comments", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
+	 @ResponseStatus(value = HttpStatus.CREATED)
+	 @ResponseBody
+	 public List<Account> post(@RequestBody final Account updated) 
+	 {
+		 accountRepository.save(updated);
+	     return accountRepository.findAll();
+	 }
 }
 
 

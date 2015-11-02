@@ -12,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import com.spring.SimpleSpringMVCApp.Application;
 
 @Configuration
-@PropertySource("classpath:persistence.properties")
 @ComponentScan(basePackageClasses = Application.class, excludeFilters = @Filter({Controller.class, Configuration.class}))
 class ApplicationConfig {
 
